@@ -7,18 +7,15 @@ DESTDIR = ../bin
 
 include (../qt_hist.conf)
 
-DEFINES += _FFTMATR_DLL_
+DEFINES += _HIST_DLL_
 DEFINES += _FILE_OFFSET_BITS=64
 
-#INCLUDEPATH *= gui \
-#               misc
+HEADERS += HistWidget.h
 
-#DEPENDSPATH *= gui \
-#               misc
+SOURCES += HistWidget.cpp
 
 headers.files += \
-                 fft_c.h \
-                 matrix.h \
-                 calcim.h
+                 HistWidget.h \
+                 src_config. h
 
 headers.path = $$HIST_INCLUDE_DIR
