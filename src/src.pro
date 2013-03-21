@@ -7,15 +7,23 @@ DESTDIR = ../bin
 
 include (../qt_hist.conf)
 
+INCLUDEPATH *= $$GSL_INC_DIR
+DEPENDPATH *= $$GSL_INC_DIR
+
 DEFINES += _HIST_DLL_
 DEFINES += _FILE_OFFSET_BITS=64
 
-HEADERS += HistWidget.h
+include (gui/gui.pri)
 
-SOURCES += HistWidget.cpp
+HEADERS += random.h
+
+SOURCES += \
+           random.cpp
 
 headers.files += \
-                 HistWidget.h \
+                 random.h \
                  src_config. h
+
+LIBS += -L$$GSL_LIB_DIR -lgsl -lm
 
 headers.path = $$HIST_INCLUDE_DIR

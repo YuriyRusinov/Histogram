@@ -16,6 +16,9 @@ HIST_DATA_DIR = $$HIST_PREFIX/data
 #external libraries paths
 EXT = /usr
 EXTERNAL_PREFIX = $$EXT
+GSL_HOME_DIR = $$EXT
+GSL_LIB_DIR = $$EXT/lib
+GSL_INC_DIR = $$EXT/include
 
 #additional installation params
 HIST_EXEC_DIR = $$HIST_PREFIX/bin
