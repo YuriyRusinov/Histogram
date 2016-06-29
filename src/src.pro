@@ -24,6 +24,6 @@ headers.files += \
                  random.h \
                  src_config. h
 
-LIBS += -L$$GSL_LIB_DIR -lgsl -lm
+LIBS += -L$$GSL_LIB_DIR -lgsl -lm -lqwt
 
 headers.path = $$HIST_INCLUDE_DIR

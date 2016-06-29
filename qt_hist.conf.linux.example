@@ -19,6 +19,9 @@ EXTERNAL_PREFIX = $$EXT
 GSL_HOME_DIR = $$EXT
 GSL_LIB_DIR = $$EXT/lib
 GSL_INC_DIR = $$EXT/include
+QWT_HOME_DIR = $$EXT
+QWT_LIB_DIR = $$EXT/lib
+QWT_INC_DIR = $$EXT/include/qwt6
 
 #additional installation params
 HIST_EXEC_DIR = $$HIST_PREFIX/bin
