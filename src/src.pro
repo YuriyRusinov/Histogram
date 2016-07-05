@@ -31,6 +31,6 @@ headers.files += \
                  gaussian_random.h \
                  src_config. h
 
-LIBS += -L$$GSL_LIB_DIR -lgsl -lm -lqwt
+LIBS += -L$$GSL_LIB_DIR -lgsl -lm  -L$$QWT_LIB_DIR -lqwt6
 
 headers.path = $$HIST_INCLUDE_DIR
