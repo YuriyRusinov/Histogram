@@ -3,8 +3,6 @@
 
 #include "src_config.h"
 
-//class gsl_rng;
-
 class _HIST_EXPORT_ RandomNumberGen
 {
 public:
@@ -12,7 +10,8 @@ public:
     virtual ~RandomNumberGen (void);
 
     virtual double gen (void) const = 0;
-private:
+
+protected:
     gsl_rng * r;
 };
 

@@ -15,13 +15,20 @@ DEFINES += _FILE_OFFSET_BITS=64
 
 include (gui/gui.pri)
 
-HEADERS += random.h
+HEADERS += \
+           random.h \
+           uniform_random.h \
+           gaussian_random.h
 
 SOURCES += \
-           random.cpp
+           random.cpp \
+           uniform_random.cpp \
+           gaussian_random.cpp
 
 headers.files += \
                  random.h \
+                 uniform_random.h \
+                 gaussian_random.h \
                  src_config. h
 
 LIBS += -L$$GSL_LIB_DIR -lgsl -lm -lqwt
