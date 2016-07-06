@@ -8,6 +8,7 @@ class _HIST_EXPORT_ UniformRandomNumberGen : public RandomNumberGen
 {
 public:
     UniformRandomNumberGen (unsigned long int s);
+    UniformRandomNumberGen (const UniformRandomNumberGen& UR);
     virtual ~UniformRandomNumberGen (void);
 
     virtual double gen (void) const;

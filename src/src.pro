@@ -18,17 +18,20 @@ include (gui/gui.pri)
 HEADERS += \
            random.h \
            uniform_random.h \
-           gaussian_random.h
+           gaussian_random.h \
+           exponential_random.h
 
 SOURCES += \
            random.cpp \
            uniform_random.cpp \
-           gaussian_random.cpp
+           gaussian_random.cpp \
+           exponential_random.cpp
 
 headers.files += \
                  random.h \
                  uniform_random.h \
                  gaussian_random.h \
+                 exponential_random.h \
                  src_config. h
 
 LIBS += -L$$GSL_LIB_DIR -lgsl -lm  -L$$QWT_LIB_DIR -lqwt6

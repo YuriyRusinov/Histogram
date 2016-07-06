@@ -6,6 +6,11 @@ UniformRandomNumberGen :: UniformRandomNumberGen (unsigned long int s)
 {
 }
 
+UniformRandomNumberGen :: UniformRandomNumberGen (const UniformRandomNumberGen& UR)
+    : RandomNumberGen (UR)
+{
+}
+
 UniformRandomNumberGen :: ~UniformRandomNumberGen (void)
 {
 }

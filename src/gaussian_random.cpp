@@ -7,6 +7,18 @@ GaussianRandomNumberGen :: GaussianRandomNumberGen (double sigma, unsigned long 
 {
 }
 
+GaussianRandomNumberGen :: GaussianRandomNumberGen (const GaussianRandomNumberGen& GR)
+    : RandomNumberGen (GR), g_sigma (GR.g_sigma)
+{
+}
+
+GaussianRandomNumberGen& GaussianRandomNumberGen :: operator= (const GaussianRandomNumberGen& GR)
+{
+    RandomNumberGen::operator= (GR);
+    g_sigma = GR.g_sigma;
+    return *this;
+}
+
 GaussianRandomNumberGen :: ~GaussianRandomNumberGen (void)
 {
 }
