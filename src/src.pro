@@ -10,6 +10,12 @@ include (../qt_hist.conf)
 INCLUDEPATH *= $$GSL_INC_DIR
 DEPENDPATH *= $$GSL_INC_DIR
 
+INCLUDEPATH *= gui \
+               gui/ui
+
+DEPENDPATH *= gui \
+              gui/ui
+
 DEFINES += _HIST_DLL_
 DEFINES += _FILE_OFFSET_BITS=64
 
@@ -34,6 +40,6 @@ headers.files += \
                  exponential_random.h \
                  src_config. h
 
-LIBS += -L$$GSL_LIB_DIR -lgsl -lm  -L$$QWT_LIB_DIR -lqwt6
+LIBS += -L$$GSL_LIB_DIR -lgsl -lcblas -lm  -L$$QWT_LIB_DIR -lqwt6
 
 headers.path = $$HIST_INCLUDE_DIR

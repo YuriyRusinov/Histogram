@@ -8,6 +8,7 @@ namespace Ui
     class hist_main_window;
 };
 
+class RandomHistObject;
 class QMdiArea;
 
 class HistMainWindow : public QMainWindow
@@ -31,6 +32,7 @@ private:
     //
     Ui::hist_main_window * UI;
     QMdiArea * m_mdiArea;
+    RandomHistObject * randH;
 
 private:
     Q_OBJECT

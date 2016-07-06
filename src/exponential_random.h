@@ -7,7 +7,7 @@
 class _HIST_EXPORT_ ExponentialRandomNumberGen : public RandomNumberGen
 {
 public:
-    ExponentialRandomNumberGen (double mat_exp, unsigned long int s);
+    ExponentialRandomNumberGen (double mat_exp, unsigned long int s=0);
     ExponentialRandomNumberGen (const ExponentialRandomNumberGen& ER);
     ExponentialRandomNumberGen& operator= (const ExponentialRandomNumberGen& ER);
     virtual ~ExponentialRandomNumberGen (void);

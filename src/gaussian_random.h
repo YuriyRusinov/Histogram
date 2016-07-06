@@ -7,7 +7,7 @@
 class _HIST_EXPORT_ GaussianRandomNumberGen : public RandomNumberGen
 {
 public:
-    GaussianRandomNumberGen (double sigma, unsigned long int s);
+    GaussianRandomNumberGen (double m, double sigma, unsigned long int s=0);
     GaussianRandomNumberGen (const GaussianRandomNumberGen& GR);
     GaussianRandomNumberGen& operator= (const GaussianRandomNumberGen& GR);
     virtual ~GaussianRandomNumberGen (void);
@@ -17,6 +17,7 @@ private:
     //
     // Variables
     //
+    double math_exp;
     double g_sigma;
 };
 

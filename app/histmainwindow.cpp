@@ -1,6 +1,7 @@
 #include <QMdiArea>
 #include <QtDebug>
 
+#include <RandomHistObj.h>
 #include "histmainwindow.h"
 #include "ui_hist_main_window.h"
 
@@ -12,6 +13,7 @@ HistMainWindow :: HistMainWindow (QWidget * parent, Qt::WindowFlags flags)
     UI->setupUi (this);
     init ();
 
+    randH = RandomHistObject :: getRandomHistObject();
     connect (UI->actSet_histogram_parameters, SIGNAL (triggered()), this, SLOT (slotSetParams()) );
     connect (UI->act_Calculate, SIGNAL (triggered()), this, SLOT (slotCalc()) );
     connect (UI->act_Quit, SIGNAL (triggered()), this, SLOT (close()) );
@@ -25,6 +27,7 @@ HistMainWindow :: ~HistMainWindow (void)
 void HistMainWindow :: slotSetParams (void)
 {
     qDebug () << __PRETTY_FUNCTION__;
+    randH->GUIRandomProc ();
 }
 
 void HistMainWindow :: slotCalc (void)
