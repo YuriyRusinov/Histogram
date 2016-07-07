@@ -20,14 +20,21 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
     <property name="title">
-     <string>&amp;Parameters</string>
+     <string>&amp;File</string>
     </property>
-    <addaction name="actSet_histogram_parameters"/>
+    <widget class="QMenu" name="menu_Parameters">
+     <property name="title">
+      <string>Set &amp;Parameters </string>
+     </property>
+     <addaction name="actRandomProcess"/>
+     <addaction name="actHistogram"/>
+    </widget>
+    <addaction name="menu_Parameters"/>
     <addaction name="act_Calculate"/>
     <addaction name="separator"/>
     <addaction name="act_Quit"/>
@@ -35,11 +42,6 @@
    <addaction name="menu_File"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actSet_histogram_parameters">
-   <property name="text">
-    <string>Set &amp;histogram parameters </string>
-   </property>
-  </action>
   <action name="act_Quit">
    <property name="text">
     <string>&amp;Quit</string>
@@ -51,6 +53,16 @@
   <action name="act_Calculate">
    <property name="text">
     <string>&amp;Calculate</string>
+   </property>
+  </action>
+  <action name="actRandomProcess">
+   <property name="text">
+    <string>&amp;Random process</string>
+   </property>
+  </action>
+  <action name="actHistogram">
+   <property name="text">
+    <string>&amp;Histogram</string>
    </property>
   </action>
  </widget>

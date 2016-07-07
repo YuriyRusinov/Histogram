@@ -78,3 +78,19 @@ void RandomHistObject :: GUIRandomProc (QWidget * parent, Qt::WindowFlags flags)
          qDebug () << __PRETTY_FUNCTION__ << resNumb;
     }
 }
+
+void RandomHistObject :: GUIHistogramParams (QWidget * parent, Qt::WindowFlags flags)
+{
+    Q_UNUSED (parent);
+    Q_UNUSED (flags);
+}
+
+void RandomHistObject :: calcHist (void)
+{
+}
+
+void RandomHistObject :: GUIViewHist (QWidget * parent, Qt::WindowFlags flags)
+{
+    Q_UNUSED (parent);
+    Q_UNUSED (flags);
+}

@@ -14,7 +14,8 @@ HistMainWindow :: HistMainWindow (QWidget * parent, Qt::WindowFlags flags)
     init ();
 
     randH = RandomHistObject :: getRandomHistObject();
-    connect (UI->actSet_histogram_parameters, SIGNAL (triggered()), this, SLOT (slotSetParams()) );
+    connect (UI->actRandomProcess, SIGNAL (triggered()), this, SLOT (slotSetRandomParams()) );
+    connect (UI->actHistogram, SIGNAL (triggered()), this, SLOT (slotSetHistParams()) );
     connect (UI->act_Calculate, SIGNAL (triggered()), this, SLOT (slotCalc()) );
     connect (UI->act_Quit, SIGNAL (triggered()), this, SLOT (close()) );
 }
@@ -24,7 +25,7 @@ HistMainWindow :: ~HistMainWindow (void)
     delete UI;
 }
 
-void HistMainWindow :: slotSetParams (void)
+void HistMainWindow :: slotSetRandomParams (void)
 {
     qDebug () << __PRETTY_FUNCTION__;
     randH->GUIRandomProc ();
@@ -38,4 +39,9 @@ void HistMainWindow :: slotCalc (void)
 void HistMainWindow :: init (void)
 {
     setCentralWidget (m_mdiArea);
+}
+
+void HistMainWindow :: slotSetHistParams (void)
+{
+    qDebug () << __PRETTY_FUNCTION__;
 }

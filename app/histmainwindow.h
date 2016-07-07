@@ -18,7 +18,8 @@ public:
     ~HistMainWindow (void);
 
 private slots:
-    void slotSetParams (void);
+    void slotSetRandomParams (void);
+    void slotSetHistParams (void);
     void slotCalc (void);
 
 private:

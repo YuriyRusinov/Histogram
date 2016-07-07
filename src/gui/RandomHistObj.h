@@ -12,6 +12,9 @@ class _HIST_EXPORT_ RandomHistObject : public QObject
 public:
     static RandomHistObject * getRandomHistObject (QObject * parent=0);
     void GUIRandomProc (QWidget * parent=0, Qt::WindowFlags flags=0);
+    void GUIHistogramParams (QWidget * parent=0, Qt::WindowFlags flags=0);
+    void calcHist (void);
+    void GUIViewHist (QWidget * parent=0, Qt::WindowFlags flags=0);
 
     enum DistrFuncs
     {
