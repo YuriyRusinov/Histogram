@@ -1,6 +1,7 @@
 #ifndef _RandomHistObject_H
 #define _RandomHistObject_H
 
+#include <gsl/gsl_histogram.h>
 #include <QObject>
 #include <QVector>
 #include "src_config.h"
@@ -23,6 +24,9 @@ public:
         Exponential=2
     };
 
+signals:
+    void viewResults (QWidget * w);
+
 private:
     //
     // Functions
@@ -37,6 +41,7 @@ private:
     static RandomHistObject * self;
     RandomNumberGen * rGenerator;
     QVector<double> resNumb;
+    gsl_histogram * hist;
 private:
     Q_OBJECT
 };

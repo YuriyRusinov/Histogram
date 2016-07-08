@@ -10,6 +10,9 @@ include (../qt_hist.conf)
 INCLUDEPATH *= $$GSL_INC_DIR
 DEPENDPATH *= $$GSL_INC_DIR
 
+INCLUDEPATH *= $$QWT_INC_DIR
+DEPENDPATH *= $$QWT_INC_DIR
+
 INCLUDEPATH *= gui \
                gui/ui
 

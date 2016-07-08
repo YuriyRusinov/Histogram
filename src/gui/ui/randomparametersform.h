@@ -2,13 +2,14 @@
 #define _RandomParametersForm_H
 
 #include <QDialog>
+#include "src_config.h"
 
 namespace Ui
 {
     class random_parameters_form;
 };
 
-class RandomParametersForm : public QDialog
+class _HIST_EXPORT_ RandomParametersForm : public QDialog
 {
 public:
     RandomParametersForm (QWidget * parent=0, Qt::WindowFlags flags=0);

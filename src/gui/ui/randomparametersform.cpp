@@ -29,6 +29,7 @@ RandomParametersForm :: RandomParametersForm (QWidget * parent, Qt::WindowFlags 
 
 RandomParametersForm :: ~RandomParametersForm (void)
 {
+    delete UI;
 }
 
 void RandomParametersForm :: setDistributions (const QMap<int, QString>& distrs)

@@ -21,6 +21,7 @@ private slots:
     void slotSetRandomParams (void);
     void slotSetHistParams (void);
     void slotCalc (void);
+    void slotView (QWidget * w);
 
 private:
     //
