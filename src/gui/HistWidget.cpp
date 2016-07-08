@@ -14,7 +14,7 @@ HistWidget :: HistWidget (double xmin, double xmax, double ymin, double ymax, QW
     QwtPlotGrid *grid = new QwtPlotGrid;
     grid->enableXMin(true);
     grid->enableYMin(true);
-#if QWT_VERSION >= 0x060103    
+#if QWT_VERSION >= 0x060100
     grid->setMajorPen(QPen(Qt::black, 0, Qt::DotLine));
     grid->setMinorPen(QPen(Qt::gray, 0 , Qt::DotLine));
 #else
