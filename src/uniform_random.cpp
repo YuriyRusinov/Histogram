@@ -29,6 +29,7 @@ UniformRandomNumberGen :: ~UniformRandomNumberGen (void)
 
 double UniformRandomNumberGen :: gen (void) const
 {
-    double res = g_sigma *(gsl_rng_uniform (r)-0.5+math_exp);
+    double xr = gsl_rng_uniform (r);
+    double res = g_sigma *(xr+math_exp-0.5);
     return res;
 }

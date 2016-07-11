@@ -64,18 +64,19 @@ void RandomHistObject :: GUIRandomProc (QWidget * parent, Qt::WindowFlags flags)
     }
     gsl_rng_env_setup();
     unsigned long s = gsl_rng_default_seed;
-    double mathExp = rpForm->getMathExp();
-    double stand = sqrt (rpForm->getDisp());
     if (rpForm->exec() == QDialog::Accepted)
     {
          DistrFuncs funDisp = (DistrFuncs )rpForm->getFunDistr ();
+         double mathExp = rpForm->getMathExp();
+         double stand = sqrt (rpForm->getDisp());
+         qDebug () << __PRETTY_FUNCTION__ << mathExp << stand;
+         int numb = rpForm->getNumber();
          switch (funDisp)
          {
              case Uniform: rGenerator = new UniformRandomNumberGen (mathExp, stand, s); break;
              case Gaussian: default: rGenerator = new GaussianRandomNumberGen (mathExp, stand, s); break;
              case Exponential: rGenerator = new ExponentialRandomNumberGen (mathExp, s); break;
          }
-         int numb = rpForm->getNumber();
          resNumb.clear ();
          resNumb.resize (numb);
          for (int i=0; i<numb; i++)
@@ -83,7 +84,6 @@ void RandomHistObject :: GUIRandomProc (QWidget * parent, Qt::WindowFlags flags)
              double x = rGenerator->gen ();
              resNumb[i] = x;
          }
-         qDebug () << __PRETTY_FUNCTION__ << resNumb;
     }
     rpForm->setParent (0);
     delete rpForm;
@@ -161,5 +161,6 @@ void RandomHistObject :: GUIViewHist (QWidget * parent, Qt::WindowFlags flags)
     double ymin = 0.0;
     double ymax = gsl_histogram_max_val (hist);
     HistWidget * hw = new HistWidget (xmin, xmax, ymin, ymax, parent, flags);
+    hw->setHistogram (hist);
     emit viewResults (hw);
 }

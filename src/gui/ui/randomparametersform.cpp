@@ -1,6 +1,7 @@
 #include <QValidator>
 #include <QDoubleValidator>
 #include <QIntValidator>
+#include <QtDebug>
 
 #include "ui_random_parameters_form.h"
 #include "randomparametersform.h"
@@ -66,6 +67,7 @@ void RandomParametersForm :: setParamsOk (void)
     double m = getMathExp();
     double d = getDisp ();
     int n = getNumber ();
+    qDebug () << __PRETTY_FUNCTION__ << m << d << n;
     emit setParams (fd, m, d, n);
     accept();
 }
