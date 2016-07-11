@@ -149,7 +149,7 @@ void RandomHistObject :: calcHist (void)
     gsl_histogram_reset (hist);
     for (int i=0; i<nr; i++)
         gsl_histogram_increment (hist, resNumb[i]);
-    gsl_histogram_fprintf (stdout, hist, "%g", "%g");
+    //gsl_histogram_fprintf (stdout, hist, "%g", "%g");
 }
 
 void RandomHistObject :: GUIViewHist (QWidget * parent, Qt::WindowFlags flags)
